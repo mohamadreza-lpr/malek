@@ -1,28 +1,182 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+      <div id="app">
+            <b-row align-v="end">
+                  <b-col cols="9">
+                        <b-row align-v="end">
+                              <b-col id="verticalSec">
+                                    <Exchange />
+                              </b-col>
+                        </b-row>
+                  </b-col>
+                  <b-col cols="3">
+                        <b-card id="navbar">
+                              <b-row>
+                                    <b-col cols="12">
+                                          <b-img :src="navLogo" fluid></b-img>
+                                    </b-col>
+                              </b-row>
+                              <b-row class="mt-2 border-bottom m-1">
+                                    <b-col>
+                                          <b-row class="mt-1 justify-content-center">
+                                                <span class="dateType">{{ persianDate }}</span>
+                                          </b-row>
+                                          <b-row class="mt-1 justify-content-center">
+                                                <span class="dateType">{{ arabicDate }}</span>
+                                          </b-row>
+                                          <b-row class="my-2 justify-content-center">
+                                                <span class="endateType">{{ engDate }}</span>
+                                          </b-row>
+                                    </b-col>
+                              </b-row>
+                              <b-row class="border-bottom m-1">
+                                    <b-col>
+                                          <Clock />
+                                    </b-col>
+                              </b-row>
+                              <b-row class="border-bottom m-1">
+                                    <div id="news">
+                                          <p>
+                                                لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از
+                                                طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که
+                                                لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف
+                                                بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در شصت و سه درصد گذشته حال و
+                                                آینده، شناخت فراوان جامعه و متخصصان را می طلبد، تا با نرم افزارها شناخت
+                                                بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی، و فرهنگ پیشرو در
+                                                زبان فارسی ایجاد کرد، در این صورت می توان امید داشت که تمام و دشواری موجود در
+                                                ارائه راهکارها، و شرایط سخت تایپ به پایان رسد و زمان مورد نیاز شامل حروفچینی
+                                                دستاوردهای اصلی، و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد
+                                                استفاده قرار گیرد.
+                                          </p>
+                                    </div>
+                              </b-row>
+                              <b-row class="m-1">
+                                    <div id="news">
+                                          <p>
+                                                لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از
+                                                طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که
+                                                لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف
+                                                بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در شصت و سه درصد گذشته حال و
+                                                آینده، شناخت فراوان جامعه و متخصصان را می طلبد، تا با نرم افزارها شناخت
+                                                بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی، و فرهنگ پیشرو در
+                                                زبان فارسی ایجاد کرد، در این صورت می توان امید داشت که تمام و دشواری موجود در
+                                                ارائه راهکارها، و شرایط سخت تایپ به پایان رسد و زمان مورد نیاز شامل حروفچینی
+                                                دستاوردهای اصلی، و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد
+                                                استفاده قرار گیرد.
+                                          </p>
+                                    </div>
+                              </b-row>
+                        </b-card>
+                  </b-col>
+            </b-row>
+            <b-row id="lastVerticalSection" class="mt-2">
+                  <Subtitle />
+            </b-row>
+      </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import Clock from "./components/Malek-Clock.vue";
+import Exchange from "./components/Exchange-Price.vue";
+import Subtitle from "./components/Subtitle-Row.vue";
+import * as moment from "jalali-moment";
+import { BCard, BRow, BCol } from "bootstrap-vue";
 export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
-}
+      name: "App",
+      components: {
+            BCard,
+            BRow,
+            BCol,
+            Clock,
+            Exchange,
+            Subtitle,
+      },
+      data() {
+            return {};
+      },
+      computed: {
+            navLogo() {
+                  return require("./assets/navLogo.png");
+            },
+            persianDate() {
+                  let persianDate = moment().locale("fa").format("dddd,Do MMMM YYYY");
+                  return persianDate;
+            },
+            arabicDate() {
+                  let arabicDate = moment().locale("ar").format("dddd,Do MMMM YYYY");
+                  return arabicDate;
+            },
+            engDate() {
+                  let arabicDate = moment().locale("en").format("dddd/Do MMMM YYYY");
+                  return arabicDate;
+            },
+      },
+      watch: {
+            scrolToDown() {
+                  var container = this.$el.querySelector("#news");
+                  container.scrollTop = container.scrollHeight;
+            },
+      },
+      methods: {
+            logDate() {
+                  let persianDate = moment().locale("fa").format("dddd, MMMM Do YYYY");
+                  console.log(persianDate);
+            },
+      },
+};
 </script>
 
 <style>
+body {
+      background-image: url("assets/z.png");
+      background-size: cover;
+      background-attachment: fixed;
+      background-repeat: no-repeat;
+      max-width: 100%;
+      overflow-x: hidden;
+}
+#news {
+      overflow-y: auto;
+      max-height: 120px;
+}
+#navbar {
+      max-width: 320px;
+      background-color: rgba(179, 179, 179, 0.775);
+      height: 630px;
+      border-radius: 15px;
+      margin-left: 15px;
+}
+#verticalSec {
+      background-color: rgba(179, 179, 179, 0.775);
+      /* width: 900px; */
+      /* height: 80px; */
+      border-radius: 15px;
+      padding-left: 0px;
+      padding-right: 20px;
+}
+#lastVerticalSection {
+      background-color: rgba(179, 179, 179, 0.775);
+      width: 100%;
+      border-radius: 15px;
+}
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+      margin: 0px 20px;
+      font-family: Avenir, Helvetica, Arial, sans-serif;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      text-align: center;
+      color: #2c3e50;
+      margin-top: 10px;
+}
+.dateType {
+      color: #ffffff;
+      font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+      font-size: 18px;
+      font-weight: 700;
+}
+.endateType {
+      color: #ffffff;
+      font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+      font-size: 16px;
+      font-weight: 700;
 }
 </style>
