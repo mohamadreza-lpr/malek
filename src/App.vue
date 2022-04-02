@@ -1,14 +1,14 @@
 <template>
       <div id="app">
             <b-row align-v="end">
-                  <b-col cols="9">
+                  <b-col cols="9" xl="9" lg="9" md="7">
                         <b-row align-v="end">
                               <b-col id="verticalSec">
                                     <Exchange class="exchange" />
                               </b-col>
                         </b-row>
                   </b-col>
-                  <b-col cols="3">
+                  <b-col cols="3" xl="3" lg="3" md="7">
                         <b-card id="navbar">
                               <b-row>
                                     <b-col cols="12">
@@ -33,48 +33,24 @@
                                           <Clock />
                                     </b-col>
                               </b-row>
-                              <b-row class="border-bottom m-1">
-                                    <div id="news">
-                                          <p>
-                                                لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از
-                                                طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که
-                                                لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف
-                                                بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در شصت و سه درصد گذشته حال و
-                                                آینده، شناخت فراوان جامعه و متخصصان را می طلبد، تا با نرم افزارها شناخت
-                                                بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی، و فرهنگ پیشرو در
-                                                زبان فارسی ایجاد کرد، در این صورت می توان امید داشت که تمام و دشواری موجود در
-                                                ارائه راهکارها، و شرایط سخت تایپ به پایان رسد و زمان مورد نیاز شامل حروفچینی
-                                                دستاوردهای اصلی، و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد
-                                                استفاده قرار گیرد.
-                                          </p>
-                                    </div>
+                              <b-row id="news" class="border-bottom m-1 overflow-hidden">
+                                    <News1 />
                               </b-row>
-                              <b-row class="m-1">
-                                    <div id="news">
-                                          <p>
-                                                لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از
-                                                طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که
-                                                لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف
-                                                بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در شصت و سه درصد گذشته حال و
-                                                آینده، شناخت فراوان جامعه و متخصصان را می طلبد، تا با نرم افزارها شناخت
-                                                بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی، و فرهنگ پیشرو در
-                                                زبان فارسی ایجاد کرد، در این صورت می توان امید داشت که تمام و دشواری موجود در
-                                                ارائه راهکارها، و شرایط سخت تایپ به پایان رسد و زمان مورد نیاز شامل حروفچینی
-                                                دستاوردهای اصلی، و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد
-                                                استفاده قرار گیرد.
-                                          </p>
-                                    </div>
+                              <b-row id="news" class="m-1 overflow-hidden">
+                                    <News2 />
                               </b-row>
                         </b-card>
                   </b-col>
             </b-row>
             <b-row id="lastVerticalSection" class="mt-2">
-                  <Subtitle class="subtitle"/>
+                  <Subtitle class="subtitle" />
             </b-row>
       </div>
 </template>
 
 <script>
+import News1 from "./components/Sidebar-News1.vue";
+import News2 from "./components/Sidebar-News2.vue";
 import Clock from "./components/Malek-Clock.vue";
 import Exchange from "./components/Exchange-Price.vue";
 import Subtitle from "./components/Subtitle-Row.vue";
@@ -89,6 +65,8 @@ export default {
             Clock,
             Exchange,
             Subtitle,
+            News1,
+            News2,
       },
       data() {
             return {};
