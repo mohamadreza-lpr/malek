@@ -69,7 +69,7 @@
                   </b-col>
             </b-row>
             <b-row id="lastVerticalSection" class="mt-2">
-                  <Subtitle />
+                  <Subtitle class="subtitle"/>
             </b-row>
       </div>
 </template>
