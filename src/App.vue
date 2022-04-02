@@ -4,7 +4,7 @@
                   <b-col cols="9">
                         <b-row align-v="end">
                               <b-col id="verticalSec">
-                                    <Exchange />
+                                    <Exchange class="exchange" />
                               </b-col>
                         </b-row>
                   </b-col>
@@ -152,6 +152,7 @@ body {
       border-radius: 15px;
       padding-left: 0px;
       padding-right: 20px;
+      overflow: hidden;
 }
 #lastVerticalSection {
       background-color: rgba(179, 179, 179, 0.775);
@@ -178,5 +179,13 @@ body {
       font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
       font-size: 16px;
       font-weight: 700;
+}
+.exchange {
+      animation: moveExchange 20s linear infinite;
+}
+@keyframes moveExchange {
+      100% {
+            transform: translateX(-1000px);
+      }
 }
 </style>
