@@ -1,14 +1,14 @@
 <template>
       <div id="app">
             <b-row align-v="end">
-                  <b-col cols="9" xl="9" lg="9" md="7">
+                  <b-col cols="12" xl="9" lg="9" md="12" sm="12" xs="12">
                         <b-row align-v="end">
                               <b-col id="verticalSec">
                                     <Exchange class="exchange" />
                               </b-col>
                         </b-row>
                   </b-col>
-                  <b-col cols="3" xl="3" lg="3" md="7">
+                  <b-col cols="12" xl="3" lg="3" md="12" sm="12" xs="12">
                         <b-card id="navbar">
                               <b-row>
                                     <b-col cols="12">
@@ -43,7 +43,9 @@
                   </b-col>
             </b-row>
             <b-row id="lastVerticalSection" class="mt-2">
-                  <Subtitle class="subtitle" />
+                  <b-col md="12">
+                        <Subtitle class="subtitle" />
+                  </b-col>
             </b-row>
       </div>
 </template>
@@ -109,24 +111,20 @@ body {
       background-size: cover;
       background-attachment: fixed;
       background-repeat: no-repeat;
-      max-width: 100%;
-      overflow-x: hidden;
 }
 #news {
-      overflow-y: auto;
       max-height: 120px;
 }
 #navbar {
-      max-width: 320px;
       background-color: rgba(179, 179, 179, 0.775);
       height: 630px;
       border-radius: 15px;
       margin-left: 15px;
+      overflow: hidden;
+      margin-top: 10px;
 }
 #verticalSec {
       background-color: rgba(179, 179, 179, 0.775);
-      /* width: 900px; */
-      /* height: 80px; */
       border-radius: 15px;
       padding-left: 0px;
       padding-right: 20px;
@@ -134,17 +132,16 @@ body {
 }
 #lastVerticalSection {
       background-color: rgba(179, 179, 179, 0.775);
-      width: 100%;
       border-radius: 15px;
 }
 #app {
       margin: 0px 20px;
       font-family: Avenir, Helvetica, Arial, sans-serif;
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
+      /* -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale; */
       text-align: center;
-      color: #2c3e50;
-      margin-top: 10px;
+      /* color: #2c3e50; */
+      /* margin-top: 10px; */
 }
 .dateType {
       color: #ffffff;
