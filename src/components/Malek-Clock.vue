@@ -34,7 +34,7 @@ export default {
 </script>
 <style>
 #clock{
-    font-size: 32px;
+    font-size: 28px;
     font-weight: 700;
     color: #FFFFFF;
     font-family:Verdana, Geneva, Tahoma, sans-serif;

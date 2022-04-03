@@ -17,7 +17,7 @@
                         <b-row align-v="center">
                               <b-col cols="12" xl="6" lg="6" md="6" sm="12" class="d-flex flex-row justify-content-center">
                                           <h5 class="text-white d-flex flex-nowrap">(-112)آلمینیوم 1450 ریال</h5>
-                                          <b-img id="img" class="ml-3" :src="redPng" fluid></b-img>
+                                          <b-img id="img" class="ml-2" :src="redPng" fluid></b-img>
                               </b-col>
                               <b-col cols="12" xl="6" lg="6" md="6" sm="12" class="blueBackgroud d-flex flex-row justify-content-center">
                                           <h5 class="text-white">(+112)مس:1450ریال</h5>
