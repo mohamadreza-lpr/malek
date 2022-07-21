@@ -1,4 +1,4 @@
-# malek
+# Single News Page
 
 ## Project setup
 ```
