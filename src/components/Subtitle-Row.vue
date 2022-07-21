@@ -1,5 +1,5 @@
 <template>
-      <div class="p">
+      <div class="p p-1">
             <b-row class="p" align-v="center">
                   <p class="paragraph">
                         لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها

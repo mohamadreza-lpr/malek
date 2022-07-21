@@ -113,11 +113,11 @@ body {
       background-repeat: no-repeat;
 }
 #news {
-      max-height: 120px;
+      max-height: 100px;
 }
 #navbar {
       background-color: rgba(179, 179, 179, 0.775);
-      height: 630px;
+      height: 610px;
       border-radius: 15px;
       margin-left: 15px;
       overflow: hidden;
@@ -126,7 +126,6 @@ body {
 #verticalSec {
       background-color: rgba(179, 179, 179, 0.775);
       border-radius: 15px;
-      padding-left: 0px;
       padding-right: 20px;
       overflow: hidden;
 }
@@ -137,11 +136,7 @@ body {
 #app {
       margin: 0px 20px;
       font-family: Avenir, Helvetica, Arial, sans-serif;
-      /* -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale; */
       text-align: center;
-      /* color: #2c3e50; */
-      /* margin-top: 10px; */
 }
 .dateType {
       color: #ffffff;

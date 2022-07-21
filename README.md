@@ -1,4 +1,4 @@
-# Single News Page
+# news-sample
 
 ## Project setup
 ```
